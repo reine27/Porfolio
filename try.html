@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="path/to/devicon.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>My Portfolio</h1>
+    </div>
+    <nav>
+      <ul>
+	
+		<li style="font-weight: bold"><button class="button" onclick="toggleProjects()">View Projects</button></li>
+        <li style="font-weight: bold" ><button class="button" href="#" id="contactBtn">Contact</button></li>
+</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle">&#9776;</div>
+  </header>
+
+  <main>
+  
+  <div class="popup-container" id="contactPopup">
+	  <div class="popup">
+		<div class="popup-close" id="closeBtn">&times;</div>
+		<h2>Contact Me</h2>
+		<p>You can reach out to me through the following:</p>
+		<div class="social-icons">
+		  <div class="icon">
+			<a href="javalreinemario27@gmail.com"><i class="fa fa-envelope"><p>Email</p></i></a>
+			
+		  </div>
+		  <div class="icon">
+			<a href="https://www.facebook.com/reinemario.javal"><i class="fa fa-facebook"><p>Facebook</p></i></a>
+			
+		  </div>
+		  <div class="icon">
+			<a href="https://github.com/reine27"><i class="fa fa-github"><p>Github</p></i></a>
+			
+		  </div>
+		</div>
+	  </div>
+	</div>
+  
+    <section class="intro">
+		<div class="profile-picture">
+		  <img src="https://scontent.fmnl8-1.fna.fbcdn.net/v/t39.30808-6/280439216_1853055001550358_1457292727244585358_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=174925&_nc_eui2=AeEVWLGObTrbexuJVI29yZrTOUFbuQ6i4J45QVu5DqLgngyJF8Mews78YySK6h8yA4XJH0RvyjBTF_o68G_yz6ze&_nc_ohc=uIGWWd1DMMoAX-hxtLZ&_nc_ht=scontent.fmnl8-1.fna&oh=00_AfAgCmFLIoM4TCs_3ASy8D9QXDgHYk6JYRbiZAG7UzfXOA&oe=641AF79F" alt="Profile Picture">
+		</div>
+
+
+      <h2>Welcome to My Portfolio</h2>
+      <p>I'm Reine Mario L. Javal, a fresh graduate with a passion for building responsive web applications that provide intuitive and engaging user experiences. During my studies, I focused on developing a strong foundation in web development, including HTML, CSS, and JavaScript, as well as popular front-end frameworks like React and Vue.js.
+
+As a detail-oriented and proactive developer, I have experience working on both individual and team projects, collaborating with stakeholders to gather requirements, design interfaces, and implement responsive, accessible, and standards-compliant code.
+
+In my spare time, I enjoy exploring new technologies and trends in web development, such as progressive web apps, mobile-first design, and serverless architecture. I am eager to apply my skills and knowledge to contribute to a dynamic and innovative team, and to continue learning and growing as a developer.</p>
+    </section>
+
+
+    <section class="projects">
+      <h2>MY PROJECTS</h2>
+      <ul>
+		<li>
+		  <h3>EdGagement Web Application </h3>
+		  <p>My project is all about making teaching more engaging and rewarding for educators. I want to introduce elements of gamification into traditional teacher responsibilities so that teachers can earn points, badges, and other incentives as they complete tasks and reach goals. By doing so, I hope to motivate and energize teachers to perform at their best and achieve even better outcomes for students.
+
+But my project isn't just about adding game-like features to teaching tasks. It's also about monitoring and tracking teacher progress so that we can identify areas of strength and weakness and provide targeted support where it's needed. With ongoing evaluation and feedback, teachers will have the opportunity to improve their skills and grow as educators.
+
+Overall, I believe that gamifying teacher responsibilities and monitoring progress is a powerful way to improve teaching and learning outcomes. By giving teachers the tools and incentives they need to excel, we can create a more engaging and fulfilling experience for educators and students alike.</p>
+		  <ul class="languages">
+			<li>Vue</li>
+			<li>CSS</li>
+			<li <i class="devicon-javascript-plain colored"></i> JavaScript</li>
+		  </ul>
+			<div style="text-align: center;">
+				<a class="button" href="https://edgagement.netlify.app/#/">View Project</a>
+				<a class="button" href="https://github.com/Accerly13/EdGagement-App.git" target="_blank" rel="noopener noreferrer">View Code</a>
+			</div>
+		</li>
+        <li>
+          <h3>Project 2</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida mauris sed justo lobortis, vitae suscipit mauris tincidunt. Sed eleifend velit nec volutpat malesuada. Integer vel lectus eget felis lobortis auctor. </p>
+          <a href="#" class="button">View Project</a>
+        </li>
+        <li>
+          <h3>Project 3</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida mauris sed justo lobortis, vitae suscipit mauris tincidunt. Sed eleifend velit nec volutpat malesuada. Integer vel lectus eget felis lobortis auctor. </p>
+          <a href="#" class="button">View Project</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+   <script>
+   
+	// Open the contact popup when the Contact button is clicked
+	document.getElementById("contactBtn").addEventListener("click", function() {
+	  document.getElementById("contactPopup").style.display = "block";
+	});
+
+	// Close the contact popup when the Close button is clicked
+	document.getElementById("closeBtn").addEventListener("click", function() {
+	  document.getElementById("contactPopup").style.display = "none";
+	});
+
+	// Close the contact popup when the user clicks outside of it
+	window.addEventListener("click", function(event) {
+	  if (event.target == document.getElementById("contactPopup")) {
+		document.getElementById("contactPopup").style.display = "none";
+	  }
+	});
+	   
+
+  function toggleProjects() {
+    // Get the projects container element
+    var projectsContainer = document.querySelector('.projects');
+    
+    // Toggle the visibility of the projects by changing the display property
+    if (projectsContainer.style.display === 'none') {
+      projectsContainer.style.display = 'block';
+      document.querySelector('button').textContent = 'Hide Projects';
+    } else {
+      projectsContainer.style.display = 'none';
+      document.querySelector('button').textContent = 'View Projects';
+    }
+  }
+  
+   // Toggle mobile menu
+	const menuToggle = document.querySelector('.menu-toggle');
+	const nav = document.querySelector('nav');
+
+	menuToggle.addEventListener('click', () => {
+	  nav.classList.toggle('active');
+	});
+   </script>
+</body>
+</html>
+
+<style>
+/* General styles */
+
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+
+.social-icons {
+  text-align: center;
+}
+
+.social-icons .icon {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+
+.popup-container {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup {
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.popup-close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  color: black;
+  font-size: 30px;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: #3B5998;
+}
+
+
+.languages {
+  display: inline;
+  margin-left: 10px; /* adjust this to your liking */
+}
+
+.languages li {
+  display: inline-block;
+  margin-right: 10px; /* adjust this to your liking */
+  font-size: 0.8em; /* adjust this to your liking */
+}
+
+  .projects {
+    display: none;
+  }
+
+.button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+	margin-bottom: 0.5rem;
+	margin-top:  0.5rem;
+  }
+
+  .button:hover {
+    background-color: #2980b9;
+  }
+
+.projects li p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+a {
+  color: inherit;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo h1 {
+  font-size: 24px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+.menu-toggle {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Introduction section styles */
+.intro {
+  background-color: #f2f2f2;
+  padding: 50px;
+  text-align: center;
+}
+
+.intro h2 {
+  margin-bottom: 20px;
+}
+
+.intro p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+/* Projects section styles */
+.projects {
+  padding: 50px;
+}
+
+.projects h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.projects ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.projects li {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.projects li h3 {
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Hide menu items on mobile */
+  nav ul {
+    display: none;
+  }
+
+  /* Show hamburger menu icon */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Add toggle functionality */
+  .active nav ul {
+    display: block;
+  }
+}
+
+</style>
